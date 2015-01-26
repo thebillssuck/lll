@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<groups>
+    <group eventID="1" id="0">
+        <receive-message comment="false" x="15" y="15">
+            <group eventID="-1" id="-1">
+                <set-dxy comment="false" x="26" y="40">
+                    <ACTOR eid="this" id="0"/>
+                    <int id="1" val="0"/>
+                    <get-val-233-1 comment="false" id="2" x="0" y="0"/>
+                </set-dxy>
+                <setanim comment="false" x="26" y="72">
+                    <ACTOR eid="this" id="0"/>
+                    <get-val-233-3 comment="false" id="1" x="0" y="0"/>
+                </setanim>
+            </group>
+            <int id="0" val="left_to_right"/>
+        </receive-message>
+    </group>
+    <group eventID="1" id="-1"/>
+    <group eventID="2" id="0">
+        <init comment="false" x="15" y="15">
+            <group eventID="-1" id="-1">
+                <if comment="false" x="26" y="40">
+                    <group eventID="-1" id="-1">
+                        <say-this comment="false" x="37" y="70">
+                            <int id="0" val="left_to_right"/>
+                        </say-this>
+                    </group>
+                    <eq comment="false" id="0" x="0" y="0">
+                        <get-val-233-4 comment="false" id="0" x="0" y="0"/>
+                        <int id="1" val="1"/>
+                    </eq>
+                </if>
+                <else comment="false" x="26" y="102">
+                    <group eventID="-1" id="-1">
+                        <say-this comment="false" x="37" y="122">
+                            <int id="0" val="right_to_left"/>
+                        </say-this>
+                    </group>
+                </else>
+            </group>
+        </init>
+    </group>
+    <group eventID="2" id="-1"/>
+    <group eventID="3" id="0">
+        <receive-message comment="false" x="15" y="15">
+            <group eventID="-1" id="-1">
+                <set-dxy comment="false" x="26" y="40">
+                    <ACTOR eid="this" id="0"/>
+                    <int id="1" val="0"/>
+                    <neg comment="false" id="2" x="0" y="0">
+                        <get-val-233-1 comment="false" id="0" x="0" y="0"/>
+                    </neg>
+                </set-dxy>
+                <setanim comment="false" x="26" y="77">
+                    <ACTOR eid="this" id="0"/>
+                    <get-val-233-2 comment="false" id="1" x="0" y="0"/>
+                </setanim>
+            </group>
+            <int id="0" val="right_to_left"/>
+        </receive-message>
+    </group>
+    <group eventID="3" id="-1"/>
+    <group eventID="4" id="0">
+        <collide comment="false" x="15" y="15">
+            <group eventID="-1" id="-1">
+                <if comment="false" x="26" y="45">
+                    <group eventID="-1" id="-1">
+                        <say-this comment="false" x="37" y="78">
+                            <int id="0" val="left_to_right"/>
+                        </say-this>
+                    </group>
+                    <collision-left comment="false" id="0" x="0" y="0">
+                        <int id="0" val="0"/>
+                        <int id="1" val="0"/>
+                    </collision-left>
+                </if>
+                <if comment="false" x="26" y="110">
+                    <group eventID="-1" id="-1">
+                        <say-this comment="false" x="37" y="143">
+                            <int id="0" val="right_to_left"/>
+                        </say-this>
+                    </group>
+                    <collision-right comment="false" id="0" x="0" y="0">
+                        <int id="0" val="0"/>
+                        <int id="1" val="0"/>
+                    </collision-right>
+                </if>
+            </group>
+        </collide>
+    </group>
+    <group eventID="4" id="-1"/>
+    <group eventID="5" id="0">
+        <step comment="false" x="15" y="15">
+            <group eventID="-1" id="-1">
+                <if comment="false" x="26" y="40">
+                    <group eventID="-1" id="-1">
+                        <set-dxy comment="false" x="37" y="78">
+                            <ACTOR eid="this" id="0"/>
+                            <int id="1" val="0"/>
+                            <get-val-233-1 comment="false" id="2" x="0" y="0"/>
+                        </set-dxy>
+                    </group>
+                    <moreeq comment="false" id="0" x="0" y="0">
+                        <get-dxy comment="false" id="0" x="0" y="0">
+                            <ACTOR eid="this" id="0"/>
+                            <int id="1" val="0"/>
+                        </get-dxy>
+                        <int id="1" val="0"/>
+                    </moreeq>
+                </if>
+                <else comment="false" x="26" y="122">
+                    <group eventID="-1" id="-1">
+                        <set-dxy comment="false" x="37" y="142">
+                            <ACTOR eid="this" id="0"/>
+                            <int id="1" val="0"/>
+                            <neg comment="false" id="2" x="0" y="0">
+                                <get-val-233-1 comment="false" id="0" x="0" y="0"/>
+                            </neg>
+                        </set-dxy>
+                    </group>
+                </else>
+            </group>
+        </step>
+    </group>
+    <group eventID="5" id="-1"/>
+</groups>

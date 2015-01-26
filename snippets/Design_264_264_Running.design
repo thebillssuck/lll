@@ -1,0 +1,399 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<groups>
+    <group eventID="1" id="0">
+        <init comment="false" x="15" y="15">
+            <group eventID="-1" id="-1">
+                <comment-long comment="false" x="26" y="40">
+                    <int id="0" val="**Note** - This Behavior requires the &amp;quot;Walking&amp;quot; Behavior to function properly. "/>
+                </comment-long>
+                <comment-short comment="false" x="26" y="120">
+                    <int id="0" val="Inputs: ----------------------"/>
+                </comment-short>
+                <comment-short comment="false" x="26" y="140">
+                    <int id="0" val="&amp;quot;Facing Right?&amp;quot; -- &amp;lt;Boolean&amp;gt; Actor Level Attribute, from &amp;quot;Walking&amp;quot; Behavior (required)"/>
+                </comment-short>
+                <comment-short comment="false" x="26" y="160">
+                    <int id="0" val="Outputs: ---------------------"/>
+                </comment-short>
+                <comment-short comment="false" x="26" y="180">
+                    <int id="0" val="&amp;quot;Is Running?&amp;quot; -- &amp;lt;Boolean&amp;gt; Actor Level Attribute"/>
+                </comment-short>
+                <set-val-264-3 comment="false" x="26" y="200">
+                    <true comment="false" id="0" x="0" y="0"/>
+                </set-val-264-3>
+            </group>
+        </init>
+    </group>
+    <group eventID="1" id="-1"/>
+    <group eventID="2" id="0">
+        <step comment="false" x="15" y="15">
+            <group eventID="-1" id="-1">
+                <if comment="false" x="26" y="40">
+                    <group eventID="-1" id="-1">
+                        <stop comment="false" x="37" y="65"/>
+                    </group>
+                    <get-val-264-1 comment="false" id="0" x="0" y="0"/>
+                </if>
+                <if comment="false" x="26" y="97">
+                    <group eventID="-1" id="-1">
+                        <actor-set-prop comment="false" x="37" y="145">
+                            <ACTOR eid="this" id="0"/>
+                            <int id="1" val="Is Running?"/>
+                            <true comment="false" id="2" x="0" y="0"/>
+                        </actor-set-prop>
+                        <set-val-264-3 comment="false" x="37" y="177">
+                            <false comment="false" id="0" x="0" y="0"/>
+                        </set-val-264-3>
+                        <set-val-264-4 comment="false" x="37" y="202">
+                            <custom-537 comment="false" id="0" x="0" y="0">
+                                <ACTOR eid="this" id="0"/>
+                            </custom-537>
+                        </set-val-264-4>
+                        <set-val-264-5 comment="false" x="37" y="235">
+                            <custom-535 comment="false" id="0" x="0" y="0">
+                                <ACTOR eid="this" id="0"/>
+                            </custom-535>
+                        </set-val-264-5>
+                        <custom-536 comment="false" x="37" y="268">
+                            <ACTOR eid="this" id="0"/>
+                            <get-val-264-8 comment="false" id="1" x="0" y="0"/>
+                        </custom-536>
+                        <custom-531 comment="false" x="37" y="300">
+                            <ACTOR eid="this" id="0"/>
+                            <get-val-264-9 comment="false" id="1" x="0" y="0"/>
+                        </custom-531>
+                        <stop comment="false" x="37" y="332"/>
+                    </group>
+                    <and comment="false" id="0" x="0" y="0">
+                        <and comment="false" id="0" x="0" y="0">
+                            <keystate comment="false" id="0" x="0" y="0">
+                                <int id="0" val="0"/>
+                                <get-val-264-2 comment="false" id="1" x="0" y="0"/>
+                            </keystate>
+                            <get-val-264-3 comment="false" id="1" x="0" y="0"/>
+                        </and>
+                        <as-boolean comment="false" id="1" x="0" y="0">
+                            <actor-get-prop comment="false" id="0" x="0" y="0">
+                                <ACTOR eid="this" id="0"/>
+                                <int id="1" val="On Ground?"/>
+                            </actor-get-prop>
+                        </as-boolean>
+                    </and>
+                </if>
+                <if comment="false" x="26" y="364">
+                    <group eventID="-1" id="-1">
+                        <actor-set-prop comment="false" x="37" y="412">
+                            <ACTOR eid="this" id="0"/>
+                            <int id="1" val="Is Running?"/>
+                            <false comment="false" id="2" x="0" y="0"/>
+                        </actor-set-prop>
+                        <custom-542 comment="false" x="37" y="444">
+                            <ACTOR eid="this" id="0"/>
+                            <get-val-264-21 comment="false" id="1" x="0" y="0"/>
+                        </custom-542>
+                        <set-val-264-6 comment="false" x="37" y="476">
+                            <false comment="false" id="0" x="0" y="0"/>
+                        </set-val-264-6>
+                        <set-val-264-3 comment="false" x="37" y="501">
+                            <true comment="false" id="0" x="0" y="0"/>
+                        </set-val-264-3>
+                        <set-val-264-7 comment="false" x="37" y="526">
+                            <int id="0" val="0"/>
+                        </set-val-264-7>
+                        <custom-536 comment="false" x="37" y="546">
+                            <ACTOR eid="this" id="0"/>
+                            <get-val-264-4 comment="false" id="1" x="0" y="0"/>
+                        </custom-536>
+                        <custom-531 comment="false" x="37" y="578">
+                            <ACTOR eid="this" id="0"/>
+                            <get-val-264-5 comment="false" id="1" x="0" y="0"/>
+                        </custom-531>
+                    </group>
+                    <and comment="false" id="0" x="0" y="0">
+                        <not comment="false" id="0" x="0" y="0">
+                            <get-val-264-3 comment="false" id="0" x="0" y="0"/>
+                        </not>
+                        <not comment="false" id="1" x="0" y="0">
+                            <keystate comment="false" id="0" x="0" y="0">
+                                <int id="0" val="0"/>
+                                <get-val-264-2 comment="false" id="1" x="0" y="0"/>
+                            </keystate>
+                        </not>
+                    </and>
+                </if>
+                <if comment="false" x="26" y="622">
+                    <group eventID="-1" id="-1">
+                        <actor-set-prop comment="false" x="37" y="670">
+                            <ACTOR eid="this" id="0"/>
+                            <int id="1" val="Is Running?"/>
+                            <false comment="false" id="2" x="0" y="0"/>
+                        </actor-set-prop>
+                        <custom-542 comment="false" x="37" y="702">
+                            <ACTOR eid="this" id="0"/>
+                            <get-val-264-21 comment="false" id="1" x="0" y="0"/>
+                        </custom-542>
+                        <set-val-264-6 comment="false" x="37" y="734">
+                            <false comment="false" id="0" x="0" y="0"/>
+                        </set-val-264-6>
+                        <stop comment="false" x="37" y="759"/>
+                    </group>
+                    <and comment="false" id="0" x="0" y="0">
+                        <not comment="false" id="0" x="0" y="0">
+                            <keystate comment="false" id="0" x="0" y="0">
+                                <int id="0" val="0"/>
+                                <get-val-264-11 comment="false" id="1" x="0" y="0"/>
+                            </keystate>
+                        </not>
+                        <not comment="false" id="1" x="0" y="0">
+                            <keystate comment="false" id="0" x="0" y="0">
+                                <int id="0" val="0"/>
+                                <get-val-264-12 comment="false" id="1" x="0" y="0"/>
+                            </keystate>
+                        </not>
+                    </and>
+                </if>
+                <if comment="false" x="26" y="791">
+                    <group eventID="-1" id="-1">
+                        <actor-set-prop comment="false" x="37" y="839">
+                            <ACTOR eid="this" id="0"/>
+                            <int id="1" val="Is Running?"/>
+                            <true comment="false" id="2" x="0" y="0"/>
+                        </actor-set-prop>
+                    </group>
+                    <and comment="false" id="0" x="0" y="0">
+                        <keystate comment="false" id="0" x="0" y="0">
+                            <int id="0" val="0"/>
+                            <get-val-264-2 comment="false" id="1" x="0" y="0"/>
+                        </keystate>
+                        <or comment="false" id="1" x="0" y="0">
+                            <keystate comment="false" id="0" x="0" y="0">
+                                <int id="0" val="0"/>
+                                <get-val-264-12 comment="false" id="1" x="0" y="0"/>
+                            </keystate>
+                            <keystate comment="false" id="1" x="0" y="0">
+                                <int id="0" val="0"/>
+                                <get-val-264-11 comment="false" id="1" x="0" y="0"/>
+                            </keystate>
+                        </or>
+                    </and>
+                </if>
+                <if comment="false" x="26" y="883">
+                    <group eventID="-1" id="-1">
+                        <say-this comment="false" x="37" y="921">
+                            <int id="0" val="SetAnimation"/>
+                        </say-this>
+                        <if comment="false" x="37" y="941">
+                            <group eventID="-1" id="-1">
+                                <set-val-264-6 comment="false" x="48" y="984">
+                                    <false comment="false" id="0" x="0" y="0"/>
+                                </set-val-264-6>
+                            </group>
+                            <less comment="false" id="0" x="0" y="0">
+                                <abs comment="false" id="0" x="0" y="0">
+                                    <get-dxy comment="false" id="0" x="0" y="0">
+                                        <ACTOR eid="this" id="0"/>
+                                        <int id="1" val="0"/>
+                                    </get-dxy>
+                                </abs>
+                                <get-val-264-10 comment="false" id="1" x="0" y="0"/>
+                            </less>
+                        </if>
+                        <if comment="false" x="37" y="1021">
+                            <group eventID="-1" id="-1">
+                                <stop comment="false" x="48" y="1064"/>
+                            </group>
+                            <less comment="false" id="0" x="0" y="0">
+                                <abs comment="false" id="0" x="0" y="0">
+                                    <get-dxy comment="false" id="0" x="0" y="0">
+                                        <ACTOR eid="this" id="0"/>
+                                        <int id="1" val="0"/>
+                                    </get-dxy>
+                                </abs>
+                                <get-val-264-9 comment="false" id="1" x="0" y="0"/>
+                            </less>
+                        </if>
+                        <incdec comment="false" x="37" y="1096">
+                            <int id="0" val="7"/>
+                            <int id="1" val="0"/>
+                            <int id="2" val="1"/>
+                        </incdec>
+                        <if comment="false" x="37" y="1123">
+                            <group eventID="-1" id="-1">
+                                <set-val-264-6 comment="false" x="48" y="1168">
+                                    <true comment="false" id="0" x="0" y="0"/>
+                                </set-val-264-6>
+                                <custom-531 comment="false" x="48" y="1193">
+                                    <ACTOR eid="this" id="0"/>
+                                    <get-val-264-10 comment="false" id="1" x="0" y="0"/>
+                                </custom-531>
+                            </group>
+                            <and comment="false" id="0" x="0" y="0">
+                                <moreeq comment="false" id="0" x="0" y="0">
+                                    <get-val-264-7 comment="false" id="0" x="0" y="0"/>
+                                    <div comment="false" id="1" x="0" y="0">
+                                        <times comment="false" id="0" x="0" y="0">
+                                            <get-val-264-13 comment="false" id="0" x="0" y="0"/>
+                                            <int id="1" val="1000"/>
+                                        </times>
+                                        <stepsize comment="false" id="1" x="0" y="0"/>
+                                    </div>
+                                </moreeq>
+                                <not comment="false" id="1" x="0" y="0">
+                                    <get-val-264-6 comment="false" id="0" x="0" y="0"/>
+                                </not>
+                            </and>
+                        </if>
+                    </group>
+                    <as-boolean comment="false" id="0" x="0" y="0">
+                        <actor-get-prop comment="false" id="0" x="0" y="0">
+                            <ACTOR eid="this" id="0"/>
+                            <int id="1" val="Is Running?"/>
+                        </actor-get-prop>
+                    </as-boolean>
+                </if>
+            </group>
+        </step>
+    </group>
+    <group eventID="2" id="-1"/>
+    <group eventID="3" id="0">
+        <receive-message comment="false" x="15" y="15">
+            <group eventID="-1" id="-1">
+                <if comment="false" x="26" y="40">
+                    <group eventID="-1" id="-1">
+                        <stop comment="false" x="37" y="93"/>
+                    </group>
+                    <or comment="false" id="0" x="0" y="0">
+                        <and comment="false" id="0" x="0" y="0">
+                            <not comment="false" id="0" x="0" y="0">
+                                <keystate comment="false" id="0" x="0" y="0">
+                                    <int id="0" val="0"/>
+                                    <get-val-264-11 comment="false" id="1" x="0" y="0"/>
+                                </keystate>
+                            </not>
+                            <not comment="false" id="1" x="0" y="0">
+                                <keystate comment="false" id="0" x="0" y="0">
+                                    <int id="0" val="0"/>
+                                    <get-val-264-12 comment="false" id="1" x="0" y="0"/>
+                                </keystate>
+                            </not>
+                        </and>
+                        <not comment="false" id="1" x="0" y="0">
+                            <as-boolean comment="false" id="0" x="0" y="0">
+                                <actor-get-prop comment="false" id="0" x="0" y="0">
+                                    <ACTOR eid="this" id="0"/>
+                                    <int id="1" val="On Ground?"/>
+                                </actor-get-prop>
+                            </as-boolean>
+                        </not>
+                    </or>
+                </if>
+                <if comment="false" x="26" y="125">
+                    <group eventID="-1" id="-1">
+                        <if comment="false" x="37" y="163">
+                            <group eventID="-1" id="-1">
+                                <custom-543 comment="false" x="48" y="211">
+                                    <ACTOR eid="this" id="0"/>
+                                    <get-val-264-17 comment="false" id="1" x="0" y="0"/>
+                                    <int id="2" val="Running"/>
+                                </custom-543>
+                                <stop comment="false" x="48" y="243"/>
+                            </group>
+                            <and comment="false" id="0" x="0" y="0">
+                                <keystate comment="false" id="0" x="0" y="0">
+                                    <int id="0" val="0"/>
+                                    <get-val-264-11 comment="false" id="1" x="0" y="0"/>
+                                </keystate>
+                                <and comment="false" id="1" x="0" y="0">
+                                    <lesseq comment="false" id="0" x="0" y="0">
+                                        <get-dxy comment="false" id="0" x="0" y="0">
+                                            <ACTOR eid="this" id="0"/>
+                                            <int id="1" val="0"/>
+                                        </get-dxy>
+                                        <int id="1" val="-1"/>
+                                    </lesseq>
+                                    <get-val-264-14 comment="false" id="1" x="0" y="0"/>
+                                </and>
+                            </and>
+                        </if>
+                        <if comment="false" x="37" y="275">
+                            <group eventID="-1" id="-1">
+                                <custom-543 comment="false" x="48" y="300">
+                                    <ACTOR eid="this" id="0"/>
+                                    <get-val-264-19 comment="false" id="1" x="0" y="0"/>
+                                    <int id="2" val="Running"/>
+                                </custom-543>
+                            </group>
+                            <get-val-264-6 comment="false" id="0" x="0" y="0"/>
+                        </if>
+                        <else comment="false" x="37" y="344">
+                            <group eventID="-1" id="-1">
+                                <custom-543 comment="false" x="48" y="364">
+                                    <ACTOR eid="this" id="0"/>
+                                    <get-val-264-15 comment="false" id="1" x="0" y="0"/>
+                                    <int id="2" val="Running"/>
+                                </custom-543>
+                            </group>
+                        </else>
+                    </group>
+                    <as-boolean comment="false" id="0" x="0" y="0">
+                        <actor-get-prop comment="false" id="0" x="0" y="0">
+                            <ACTOR eid="this" id="0"/>
+                            <int id="1" val="Facing Right?"/>
+                        </actor-get-prop>
+                    </as-boolean>
+                </if>
+                <else comment="false" x="26" y="420">
+                    <group eventID="-1" id="-1">
+                        <if comment="false" x="37" y="440">
+                            <group eventID="-1" id="-1">
+                                <custom-543 comment="false" x="48" y="488">
+                                    <ACTOR eid="this" id="0"/>
+                                    <get-val-264-18 comment="false" id="1" x="0" y="0"/>
+                                    <int id="2" val="Running"/>
+                                </custom-543>
+                                <stop comment="false" x="48" y="520"/>
+                            </group>
+                            <and comment="false" id="0" x="0" y="0">
+                                <keystate comment="false" id="0" x="0" y="0">
+                                    <int id="0" val="0"/>
+                                    <get-val-264-12 comment="false" id="1" x="0" y="0"/>
+                                </keystate>
+                                <and comment="false" id="1" x="0" y="0">
+                                    <moreeq comment="false" id="0" x="0" y="0">
+                                        <get-dxy comment="false" id="0" x="0" y="0">
+                                            <ACTOR eid="this" id="0"/>
+                                            <int id="1" val="0"/>
+                                        </get-dxy>
+                                        <int id="1" val="1"/>
+                                    </moreeq>
+                                    <get-val-264-14 comment="false" id="1" x="0" y="0"/>
+                                </and>
+                            </and>
+                        </if>
+                        <if comment="false" x="37" y="552">
+                            <group eventID="-1" id="-1">
+                                <custom-543 comment="false" x="48" y="577">
+                                    <ACTOR eid="this" id="0"/>
+                                    <get-val-264-20 comment="false" id="1" x="0" y="0"/>
+                                    <int id="2" val="Running"/>
+                                </custom-543>
+                            </group>
+                            <get-val-264-6 comment="false" id="0" x="0" y="0"/>
+                        </if>
+                        <else comment="false" x="37" y="621">
+                            <group eventID="-1" id="-1">
+                                <custom-543 comment="false" x="48" y="641">
+                                    <ACTOR eid="this" id="0"/>
+                                    <get-val-264-16 comment="false" id="1" x="0" y="0"/>
+                                    <int id="2" val="Running"/>
+                                </custom-543>
+                            </group>
+                        </else>
+                    </group>
+                </else>
+            </group>
+            <int id="0" val="SetAnimation"/>
+        </receive-message>
+    </group>
+    <group eventID="3" id="-1"/>
+</groups>

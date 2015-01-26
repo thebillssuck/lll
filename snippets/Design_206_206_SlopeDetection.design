@@ -1,0 +1,372 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<groups>
+    <group eventID="1" id="0">
+        <step comment="false" x="15" y="15">
+            <group eventID="-1" id="-1">
+                <if comment="false" x="26" y="40">
+                    <group eventID="-1" id="-1">
+                        <if comment="false" x="37" y="75">
+                            <group eventID="-1" id="-1">
+                                <set-dxy comment="false" x="48" y="123">
+                                    <ACTOR eid="this" id="0"/>
+                                    <int id="1" val="1"/>
+                                    <int id="2" val="0.0"/>
+                                </set-dxy>
+                            </group>
+                            <and comment="false" id="0" x="0" y="0">
+                                <less comment="false" id="0" x="0" y="0">
+                                    <get-xy comment="false" id="0" x="0" y="0">
+                                        <ACTOR eid="this" id="0"/>
+                                        <int id="1" val="1"/>
+                                    </get-xy>
+                                    <get-val-206-16 comment="false" id="1" x="0" y="0"/>
+                                </less>
+                                <not comment="false" id="1" x="0" y="0">
+                                    <keystate comment="false" id="0" x="0" y="0">
+                                        <int id="0" val="0"/>
+                                        <get-val-206-15 comment="false" id="1" x="0" y="0"/>
+                                    </keystate>
+                                </not>
+                            </and>
+                        </if>
+                    </group>
+                    <and comment="false" id="0" x="0" y="0">
+                        <get-val-206-1 comment="false" id="0" x="0" y="0"/>
+                        <not comment="false" id="1" x="0" y="0">
+                            <get-val-206-3 comment="false" id="0" x="0" y="0"/>
+                        </not>
+                    </and>
+                </if>
+                <set-val-206-1 comment="false" x="26" y="174">
+                    <get-val-206-3 comment="false" id="0" x="0" y="0"/>
+                </set-val-206-1>
+                <set-val-206-5 comment="false" x="26" y="199">
+                    <not comment="false" id="0" x="0" y="0">
+                        <get-val-206-4 comment="false" id="0" x="0" y="0"/>
+                    </not>
+                </set-val-206-5>
+                <set-val-206-3 comment="false" x="26" y="229">
+                    <false comment="false" id="0" x="0" y="0"/>
+                </set-val-206-3>
+                <set-val-206-4 comment="false" x="26" y="254">
+                    <false comment="false" id="0" x="0" y="0"/>
+                </set-val-206-4>
+                <if comment="false" x="26" y="279">
+                    <group eventID="-1" id="-1">
+                        <if comment="false" x="37" y="304">
+                            <group eventID="-1" id="-1">
+                                <actor-set-prop comment="false" x="48" y="357">
+                                    <ACTOR eid="this" id="0"/>
+                                    <int id="1" val="Is Slope Sliding?"/>
+                                    <true comment="false" id="2" x="0" y="0"/>
+                                </actor-set-prop>
+                                <set-val-206-5 comment="false" x="48" y="389">
+                                    <true comment="false" id="0" x="0" y="0"/>
+                                </set-val-206-5>
+                                <push-shove comment="false" x="48" y="414">
+                                    <ACTOR eid="this" id="0"/>
+                                    <int id="1" val="1"/>
+                                    <int id="2" val="0"/>
+                                    <int id="3" val="1"/>
+                                    <get-val-206-19 comment="false" id="4" x="0" y="0"/>
+                                </push-shove>
+                                <custom-code comment="true" x="48" y="446">
+                                    <int id="0" val="print(&amp;quot;Y Speed: &amp;quot; + actor.getYVelocity() + &amp;quot; Slope Grade: &amp;quot; + SlopeGrade);"/>
+                                </custom-code>
+                                <if comment="false" x="48" y="466">
+                                    <group eventID="-1" id="-1">
+                                        <set-dxy comment="false" x="59" y="504">
+                                            <ACTOR eid="this" id="0"/>
+                                            <int id="1" val="1"/>
+                                            <plus comment="false" id="2" x="0" y="0">
+                                                <get-val-206-17 comment="false" id="0" x="0" y="0"/>
+                                                <get-val-206-18 comment="false" id="1" x="0" y="0"/>
+                                            </plus>
+                                        </set-dxy>
+                                    </group>
+                                    <more comment="false" id="0" x="0" y="0">
+                                        <get-dxy comment="false" id="0" x="0" y="0">
+                                            <ACTOR eid="this" id="0"/>
+                                            <int id="1" val="1"/>
+                                        </get-dxy>
+                                        <plus comment="false" id="1" x="0" y="0">
+                                            <get-val-206-17 comment="false" id="0" x="0" y="0"/>
+                                            <get-val-206-18 comment="false" id="1" x="0" y="0"/>
+                                        </plus>
+                                    </more>
+                                </if>
+                                <if comment="false" x="48" y="553">
+                                    <group eventID="-1" id="-1">
+                                        <set-dxy comment="false" x="59" y="593">
+                                            <ACTOR eid="this" id="0"/>
+                                            <int id="1" val="1"/>
+                                            <neg comment="false" id="2" x="0" y="0">
+                                                <plus comment="false" id="0" x="0" y="0">
+                                                    <get-val-206-17 comment="false" id="0" x="0" y="0"/>
+                                                    <get-val-206-18 comment="false" id="1" x="0" y="0"/>
+                                                </plus>
+                                            </neg>
+                                        </set-dxy>
+                                    </group>
+                                    <less comment="false" id="0" x="0" y="0">
+                                        <get-dxy comment="false" id="0" x="0" y="0">
+                                            <ACTOR eid="this" id="0"/>
+                                            <int id="1" val="1"/>
+                                        </get-dxy>
+                                        <neg comment="false" id="1" x="0" y="0">
+                                            <plus comment="false" id="0" x="0" y="0">
+                                                <get-val-206-17 comment="false" id="0" x="0" y="0"/>
+                                                <get-val-206-18 comment="false" id="1" x="0" y="0"/>
+                                            </plus>
+                                        </neg>
+                                    </less>
+                                </if>
+                            </group>
+                            <and comment="false" id="0" x="0" y="0">
+                                <get-val-206-12 comment="false" id="0" x="0" y="0"/>
+                                <and comment="false" id="1" x="0" y="0">
+                                    <keystate comment="false" id="0" x="0" y="0">
+                                        <int id="0" val="0"/>
+                                        <get-val-206-13 comment="false" id="1" x="0" y="0"/>
+                                    </keystate>
+                                    <not comment="false" id="1" x="0" y="0">
+                                        <keystate comment="false" id="0" x="0" y="0">
+                                            <int id="0" val="0"/>
+                                            <get-val-206-15 comment="false" id="1" x="0" y="0"/>
+                                        </keystate>
+                                    </not>
+                                </and>
+                            </and>
+                        </if>
+                        <else comment="false" x="37" y="659">
+                            <group eventID="-1" id="-1">
+                                <actor-set-prop comment="false" x="48" y="679">
+                                    <ACTOR eid="this" id="0"/>
+                                    <int id="1" val="Is Slope Sliding?"/>
+                                    <false comment="false" id="2" x="0" y="0"/>
+                                </actor-set-prop>
+                            </group>
+                        </else>
+                        <if comment="false" x="37" y="723">
+                            <group eventID="-1" id="-1">
+                                <if comment="false" x="48" y="776">
+                                    <group eventID="-1" id="-1">
+                                        <set-dxy comment="false" x="59" y="829">
+                                            <ACTOR eid="this" id="0"/>
+                                            <int id="1" val="0"/>
+                                            <int id="2" val="0"/>
+                                        </set-dxy>
+                                        <set-xy comment="false" x="59" y="856">
+                                            <ACTOR eid="this" id="0"/>
+                                            <int id="1" val="0"/>
+                                            <get-val-206-6 comment="false" id="2" x="0" y="0"/>
+                                        </set-xy>
+                                    </group>
+                                    <or comment="false" id="0" x="0" y="0">
+                                        <not comment="false" id="0" x="0" y="0">
+                                            <get-val-206-12 comment="false" id="0" x="0" y="0"/>
+                                        </not>
+                                        <and comment="false" id="1" x="0" y="0">
+                                            <get-val-206-12 comment="false" id="0" x="0" y="0"/>
+                                            <not comment="false" id="1" x="0" y="0">
+                                                <keystate comment="false" id="0" x="0" y="0">
+                                                    <int id="0" val="0"/>
+                                                    <get-val-206-13 comment="false" id="1" x="0" y="0"/>
+                                                </keystate>
+                                            </not>
+                                        </and>
+                                    </or>
+                                </if>
+                            </group>
+                            <and comment="false" id="0" x="0" y="0">
+                                <not comment="false" id="0" x="0" y="0">
+                                    <get-val-206-5 comment="false" id="0" x="0" y="0"/>
+                                </not>
+                                <and comment="false" id="1" x="0" y="0">
+                                    <not comment="false" id="0" x="0" y="0">
+                                        <keystate comment="false" id="0" x="0" y="0">
+                                            <int id="0" val="0"/>
+                                            <get-val-206-7 comment="false" id="1" x="0" y="0"/>
+                                        </keystate>
+                                    </not>
+                                    <not comment="false" id="1" x="0" y="0">
+                                        <keystate comment="false" id="0" x="0" y="0">
+                                            <int id="0" val="0"/>
+                                            <get-val-206-8 comment="false" id="1" x="0" y="0"/>
+                                        </keystate>
+                                    </not>
+                                </and>
+                            </and>
+                        </if>
+                        <if comment="false" x="37" y="912">
+                            <group eventID="-1" id="-1">
+                                <set-dxy comment="false" x="48" y="955">
+                                    <ACTOR eid="this" id="0"/>
+                                    <int id="1" val="1"/>
+                                    <int id="2" val="0"/>
+                                </set-dxy>
+                            </group>
+                            <or comment="false" id="0" x="0" y="0">
+                                <keystate comment="false" id="0" x="0" y="0">
+                                    <int id="0" val="2"/>
+                                    <get-val-206-7 comment="false" id="1" x="0" y="0"/>
+                                </keystate>
+                                <keystate comment="false" id="1" x="0" y="0">
+                                    <int id="0" val="2"/>
+                                    <get-val-206-8 comment="false" id="1" x="0" y="0"/>
+                                </keystate>
+                            </or>
+                        </if>
+                    </group>
+                    <get-val-206-1 comment="false" id="0" x="0" y="0"/>
+                </if>
+                <else comment="false" x="26" y="1006">
+                    <group eventID="-1" id="-1">
+                        <actor-set-prop comment="false" x="37" y="1026">
+                            <ACTOR eid="this" id="0"/>
+                            <int id="1" val="Is Slope Sliding?"/>
+                            <false comment="false" id="2" x="0" y="0"/>
+                        </actor-set-prop>
+                    </group>
+                </else>
+                <set-val-206-6 comment="false" x="26" y="1070">
+                    <get-xy comment="false" id="0" x="0" y="0">
+                        <ACTOR eid="this" id="0"/>
+                        <int id="1" val="0"/>
+                    </get-xy>
+                </set-val-206-6>
+                <set-val-206-16 comment="false" x="26" y="1103">
+                    <get-xy comment="false" id="0" x="0" y="0">
+                        <ACTOR eid="this" id="0"/>
+                        <int id="1" val="1"/>
+                    </get-xy>
+                </set-val-206-16>
+            </group>
+        </step>
+    </group>
+    <group eventID="1" id="-1"/>
+    <group eventID="2" id="0">
+        <collide comment="false" x="15" y="15">
+            <group eventID="-1" id="-1">
+                <if comment="false" x="26" y="45">
+                    <group eventID="-1" id="-1">
+                        <stop comment="false" x="37" y="83"/>
+                    </group>
+                    <not comment="false" id="0" x="0" y="0">
+                        <collision-type comment="false" id="0" x="0" y="0">
+                            <int id="0" val="0"/>
+                            <int id="1" val="2"/>
+                        </collision-type>
+                    </not>
+                </if>
+                <collision-foreach comment="false" x="26" y="115">
+                    <group eventID="-1" id="-1">
+                        <set-val-206-2 comment="false" x="37" y="135">
+                            <collision-xynxy comment="false" id="0" x="0" y="0">
+                                <int id="0" val="3"/>
+                            </collision-xynxy>
+                        </set-val-206-2>
+                        <custom-code comment="false" x="37" y="168">
+                            <int id="0" val="if (sameAs(event.actorB, actor)) yNorm = -(point.normal.y); "/>
+                        </custom-code>
+                        <set-val-206-17 comment="false" x="37" y="188">
+                            <minus comment="false" id="0" x="0" y="0">
+                                <int id="0" val="100"/>
+                                <times comment="false" id="1" x="0" y="0">
+                                    <get-val-206-2 comment="false" id="0" x="0" y="0"/>
+                                    <int id="1" val="100"/>
+                                </times>
+                            </minus>
+                        </set-val-206-17>
+                        <if comment="false" x="37" y="223">
+                            <group eventID="-1" id="-1">
+                                <print comment="false" x="48" y="248">
+                                    <str-combine comment="false" id="0" x="0" y="0">
+                                        <int id="0" val="Slope Grade: "/>
+                                        <tostring comment="false" id="1" x="0" y="0">
+                                            <get-val-206-17 comment="false" id="0" x="0" y="0"/>
+                                        </tostring>
+                                    </str-combine>
+                                </print>
+                            </group>
+                            <get-val-206-10 comment="false" id="0" x="0" y="0"/>
+                        </if>
+                        <if comment="false" x="37" y="295">
+                            <group eventID="-1" id="-1">
+                                <set-val-206-3 comment="false" x="48" y="325">
+                                    <true comment="false" id="0" x="0" y="0"/>
+                                </set-val-206-3>
+                                <if comment="false" x="48" y="350">
+                                    <group eventID="-1" id="-1">
+                                        <set-val-206-4 comment="false" x="59" y="390">
+                                            <true comment="false" id="0" x="0" y="0"/>
+                                        </set-val-206-4>
+                                    </group>
+                                    <less comment="false" id="0" x="0" y="0">
+                                        <get-val-206-17 comment="false" id="0" x="0" y="0"/>
+                                        <minus comment="false" id="1" x="0" y="0">
+                                            <int id="0" val="100"/>
+                                            <minus comment="false" id="1" x="0" y="0">
+                                                <int id="0" val="100"/>
+                                                <get-val-206-9 comment="false" id="1" x="0" y="0"/>
+                                            </minus>
+                                        </minus>
+                                    </less>
+                                </if>
+                            </group>
+                            <less comment="false" id="0" x="0" y="0">
+                                <get-val-206-2 comment="false" id="0" x="0" y="0"/>
+                                <int id="1" val="1"/>
+                            </less>
+                        </if>
+                    </group>
+                </collision-foreach>
+            </group>
+        </collide>
+    </group>
+    <group eventID="2" id="-1"/>
+    <group eventID="3" id="0">
+        <draw comment="false" x="15" y="15">
+            <group eventID="-1" id="-1">
+                <if comment="false" x="26" y="40">
+                    <group eventID="-1" id="-1">
+                        <draw-text comment="false" x="37" y="65">
+                            <str-combine comment="false" id="0" x="0" y="0">
+                                <int id="0" val="On Slope: "/>
+                                <tostring comment="false" id="1" x="0" y="0">
+                                    <get-val-206-1 comment="false" id="0" x="0" y="0"/>
+                                </tostring>
+                            </str-combine>
+                            <int id="1" val="30"/>
+                            <int id="2" val="-60"/>
+                        </draw-text>
+                        <draw-text comment="false" x="37" y="100">
+                            <str-combine comment="false" id="0" x="0" y="0">
+                                <int id="0" val="Prevent Sliding: "/>
+                                <tostring comment="false" id="1" x="0" y="0">
+                                    <not comment="false" id="0" x="0" y="0">
+                                        <get-val-206-5 comment="false" id="0" x="0" y="0"/>
+                                    </not>
+                                </tostring>
+                            </str-combine>
+                            <int id="1" val="30"/>
+                            <int id="2" val="-30"/>
+                        </draw-text>
+                        <draw-text comment="false" x="37" y="140">
+                            <as-boolean comment="false" id="0" x="0" y="0">
+                                <actor-get-prop comment="false" id="0" x="0" y="0">
+                                    <ACTOR eid="this" id="0"/>
+                                    <int id="1" val="Is Slope Sliding?"/>
+                                </actor-get-prop>
+                            </as-boolean>
+                            <int id="1" val="30"/>
+                            <int id="2" val="-90"/>
+                        </draw-text>
+                    </group>
+                    <get-val-206-10 comment="false" id="0" x="0" y="0"/>
+                </if>
+            </group>
+        </draw>
+    </group>
+    <group eventID="3" id="-1"/>
+</groups>

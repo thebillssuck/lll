@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<groups>
+    <group eventID="1" id="0">
+        <receive-message comment="false" x="13" y="15">
+            <group eventID="-1" id="-1">
+                <if comment="false" x="24" y="40">
+                    <group eventID="-1" id="-1">
+                        <play-sound4 comment="false" x="35" y="83">
+                            <int id="0" val="0"/>
+                            <get-val-234-6 comment="false" id="1" x="0" y="0"/>
+                        </play-sound4>
+                        <actor-set-prop comment="false" x="35" y="115">
+                            <ACTOR eid="this" id="0"/>
+                            <int id="1" val="_BeingStomped"/>
+                            <true comment="false" id="2" x="0" y="0"/>
+                        </actor-set-prop>
+                        <setanim comment="false" x="35" y="147">
+                            <ACTOR eid="this" id="0"/>
+                            <get-val-234-5 comment="false" id="1" x="0" y="0"/>
+                        </setanim>
+                        <if comment="false" x="35" y="179">
+                            <group eventID="1" id="-1">
+                                <dolater comment="false" x="46" y="217">
+                                    <group eventID="1" id="-1">
+                                        <setvel comment="false" x="57" y="244">
+                                            <ACTOR eid="this" id="0"/>
+                                            <int id="1" val="0"/>
+                                            <int id="2" val="5"/>
+                                        </setvel>
+                                        <setanim comment="false" x="57" y="271">
+                                            <ACTOR eid="this" id="0"/>
+                                            <get-val-234-10 comment="false" id="1" x="0" y="0"/>
+                                        </setanim>
+                                    </group>
+                                    <int id="0" val="0.2"/>
+                                    <ACTOR eid="this" id="2"/>
+                                </dolater>
+                            </group>
+                            <more comment="false" id="0" x="0" y="0">
+                                <get-dxy comment="false" id="0" x="0" y="0">
+                                    <ACTOR eid="this" id="0"/>
+                                    <int id="1" val="0"/>
+                                </get-dxy>
+                                <int id="1" val="0"/>
+                            </more>
+                        </if>
+                    </group>
+                    <not comment="false" id="0" x="0" y="0">
+                        <as-boolean comment="false" id="0" x="0" y="0">
+                            <actor-get-prop comment="false" id="0" x="0" y="0">
+                                <ACTOR eid="this" id="0"/>
+                                <int id="1" val="_BeingStomped"/>
+                            </actor-get-prop>
+                        </as-boolean>
+                    </not>
+                </if>
+                <if comment="false" x="24" y="339">
+                    <group eventID="1" id="-1">
+                        <dolater comment="false" x="35" y="377">
+                            <group eventID="1" id="-1">
+                                <setvel comment="false" x="46" y="404">
+                                    <ACTOR eid="this" id="0"/>
+                                    <int id="1" val="180"/>
+                                    <int id="2" val="5"/>
+                                </setvel>
+                                <setanim comment="false" x="46" y="431">
+                                    <ACTOR eid="this" id="0"/>
+                                    <get-val-234-11 comment="false" id="1" x="0" y="0"/>
+                                </setanim>
+                            </group>
+                            <int id="0" val="0.2"/>
+                            <ACTOR eid="this" id="2"/>
+                        </dolater>
+                    </group>
+                    <less comment="false" id="0" x="0" y="0">
+                        <get-dxy comment="false" id="0" x="0" y="0">
+                            <ACTOR eid="this" id="0"/>
+                            <int id="1" val="0"/>
+                        </get-dxy>
+                        <int id="1" val="0"/>
+                    </less>
+                </if>
+                <set-dxy comment="false" x="24" y="487">
+                    <ACTOR eid="this" id="0"/>
+                    <int id="1" val="0"/>
+                    <int id="2" val="0"/>
+                </set-dxy>
+                <actor-set-prop comment="false" x="24" y="514">
+                    <ACTOR eid="this" id="0"/>
+                    <int id="1" val="_DisallowMovement"/>
+                    <true comment="false" id="2" x="0" y="0"/>
+                </actor-set-prop>
+                <dolater comment="false" x="24" y="546">
+                    <group eventID="-1" id="-1">
+                        <incdec comment="false" x="35" y="573">
+                            <int id="0" val="8"/>
+                            <int id="1" val="1"/>
+                            <int id="2" val="1"/>
+                        </incdec>
+                        <actor-set-prop comment="false" x="35" y="600">
+                            <ACTOR eid="this" id="0"/>
+                            <int id="1" val="_DisallowMovement"/>
+                            <false comment="false" id="2" x="0" y="0"/>
+                        </actor-set-prop>
+                        <actor-set-prop comment="false" x="35" y="632">
+                            <ACTOR eid="this" id="0"/>
+                            <int id="1" val="_BeingStomped"/>
+                            <false comment="false" id="2" x="0" y="0"/>
+                        </actor-set-prop>
+                    </group>
+                    <int id="0" val="0.2"/>
+                    <ACTOR eid="this" id="2"/>
+                </dolater>
+            </group>
+            <int id="0" val="stomped"/>
+        </receive-message>
+    </group>
+    <group eventID="1" id="-1"/>
+    <group eventID="3" id="0">
+        <step comment="false" x="15" y="15">
+            <group eventID="3" id="-1">
+                <if comment="false" x="26" y="40">
+                    <group eventID="1" id="-1">
+                        <die comment="false" x="37" y="70">
+                            <ACTOR eid="this" id="0"/>
+                        </die>
+                    </group>
+                    <eq comment="false" id="0" x="0" y="0">
+                        <get-val-234-8 comment="false" id="0" x="0" y="0"/>
+                        <int id="1" val="0"/>
+                    </eq>
+                </if>
+            </group>
+        </step>
+    </group>
+    <group eventID="3" id="-1"/>
+</groups>

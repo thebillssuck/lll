@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<groups>
+<group id="0">
+<draw comment="false" x="15" y="656">
+<group id="-1"/>
+</draw>
+</group>
+<group id="1">
+<init comment="false" x="15" y="15">
+<group id="-1">
+<actors-of-type3 comment="false" x="26" y="40">
+<group id="-1">
+<set-val-216-3 comment="false" x="37" y="72">
+<actor-of-type comment="false" id="0" x="0" y="0"/>
+</set-val-216-3>
+</group>
+<get-val-216-2 comment="false" id="0" x="0" y="0"/>
+</actors-of-type3>
+<comment-short comment="false" x="26" y="116">
+<int id="0" val="Enabling this for the player will allow the platforms to work more accurately"/>
+</comment-short>
+<bullet-mode comment="false" x="26" y="136">
+<ACTOR eid="var" id="0" vid="3"/>
+</bullet-mode>
+</group>
+</init>
+</group>
+<group id="2">
+<collide comment="false" x="15" y="533">
+<group id="-1">
+<if comment="false" x="26" y="558">
+<group id="-1">
+<set-val-216-12 comment="false" x="37" y="591">
+<true comment="false" id="0" x="0" y="0"/>
+</set-val-216-12>
+</group>
+<collision-top comment="false" id="0" x="0" y="0">
+<int id="0" val="0"/>
+</collision-top>
+</if>
+</group>
+</collide>
+</group>
+<group id="3">
+<step comment="false" x="15" y="191">
+<group id="-1">
+<set-val-216-11 comment="false" x="26" y="216">
+<get-val-216-12 comment="false" id="0" x="0" y="0"/>
+</set-val-216-11>
+<set-val-216-12 comment="false" x="26" y="241">
+<false comment="false" id="0" x="0" y="0"/>
+</set-val-216-12>
+<if comment="false" x="26" y="266">
+<group id="-1">
+<set-val-216-4 comment="false" x="37" y="304">
+<plus comment="false" id="0" x="0" y="0">
+<gety comment="false" id="0" x="0" y="0">
+<ACTOR eid="var" id="0" vid="3"/>
+</gety>
+<getheight comment="false" id="1" x="0" y="0">
+<ACTOR eid="var" id="0" vid="3"/>
+</getheight>
+</plus>
+</set-val-216-4>
+<if comment="false" x="37" y="342">
+<group id="-1">
+<setanim comment="false" x="48" y="385">
+<ACTOR eid="this" id="0"/>
+<get-val-216-5 comment="false" id="1" x="0" y="0"/>
+</setanim>
+</group>
+<or comment="false" id="0" x="0" y="0">
+<lesseq comment="false" id="0" x="0" y="0">
+<get-val-216-4 comment="false" id="0" x="0" y="0"/>
+<gety comment="false" id="1" x="0" y="0">
+<ACTOR eid="this" id="0"/>
+</gety>
+</lesseq>
+<get-val-216-11 comment="false" id="1" x="0" y="0"/>
+</or>
+</if>
+<else comment="false" x="37" y="429">
+<group id="-1">
+<setanim comment="false" x="48" y="449">
+<ACTOR eid="this" id="0"/>
+<get-val-216-6 comment="false" id="1" x="0" y="0"/>
+</setanim>
+</group>
+</else>
+</group>
+<and comment="false" id="0" x="0" y="0">
+<hasvalue comment="false" id="0" x="0" y="0">
+<int id="0" val="3"/>
+</hasvalue>
+<isalive comment="false" id="1" x="0" y="0">
+<ACTOR eid="var" id="0" vid="3"/>
+</isalive>
+</and>
+</if>
+</group>
+</step>
+</group>
+<group id="-1"/>
+</groups>

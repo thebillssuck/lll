@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<groups>
+    <group eventID="1" id="0">
+        <init comment="false" x="15" y="15">
+            <group eventID="-1" id="-1">
+                <comment-short comment="false" x="26" y="40">
+                    <int id="0" val="Inputs: ----------------------"/>
+                </comment-short>
+                <comment-short comment="false" x="26" y="60">
+                    <int id="0" val="&amp;quot;On Ground?&amp;quot; -- &amp;lt;Boolean&amp;gt; Actor Level Attribute, from &amp;quot;On Ground&amp;quot; Behavior (required)"/>
+                </comment-short>
+                <comment-short comment="false" x="26" y="80">
+                    <int id="0" val="&amp;quot;Facing Right?&amp;quot; -- &amp;lt;Boolean&amp;gt; Actor Level Attribute, from &amp;quot;Walking&amp;quot; Behavior (required)"/>
+                </comment-short>
+                <comment-short comment="false" x="26" y="100">
+                    <int id="0" val="Outputs: ---------------------"/>
+                </comment-short>
+                <comment-short comment="false" x="26" y="120">
+                    <int id="0" val="&amp;quot;Is Wall Jumping?&amp;quot; -- &amp;lt;Boolean&amp;gt; Actor Level Attribute"/>
+                </comment-short>
+            </group>
+        </init>
+    </group>
+    <group eventID="1" id="-1">
+        <custom-540 comment="false" x="37" y="2077">
+            <ACTOR eid="this" id="0"/>
+        </custom-540>
+        <custom-540 comment="false" x="48" y="1942">
+            <ACTOR eid="this" id="0"/>
+        </custom-540>
+        <custom-540 comment="false" x="48" y="1661">
+            <ACTOR eid="this" id="0"/>
+        </custom-540>
+        <custom-540 comment="false" x="48" y="1372">
+            <ACTOR eid="this" id="0"/>
+        </custom-540>
+    </group>
+    <group eventID="3" id="0">
+        <collide comment="false" x="15" y="15">
+            <group eventID="-1" id="-1">
+                <if comment="false" x="26" y="45">
+                    <group eventID="-1" id="-1">
+                        <stop comment="false" x="37" y="88"/>
+                    </group>
+                    <or comment="false" id="0" x="0" y="0">
+                        <collision-type comment="false" id="0" x="0" y="0">
+                            <int id="0" val="0"/>
+                            <int id="1" val="3"/>
+                        </collision-type>
+                        <not comment="false" id="1" x="0" y="0">
+                            <collision-type comment="false" id="0" x="0" y="0">
+                                <int id="0" val="0"/>
+                                <int id="1" val="2"/>
+                            </collision-type>
+                        </not>
+                    </or>
+                </if>
+                <if comment="false" x="26" y="120">
+                    <group eventID="-1" id="-1">
+                        <set-val-259-2 comment="false" x="37" y="153">
+                            <true comment="false" id="0" x="0" y="0"/>
+                        </set-val-259-2>
+                        <actor-set-prop comment="false" x="37" y="178">
+                            <ACTOR eid="this" id="0"/>
+                            <int id="1" val="Is Wall Jumping?"/>
+                            <false comment="false" id="2" x="0" y="0"/>
+                        </actor-set-prop>
+                        <custom-542 comment="false" x="37" y="210">
+                            <ACTOR eid="this" id="0"/>
+                            <get-val-259-17 comment="false" id="1" x="0" y="0"/>
+                        </custom-542>
+                    </group>
+                    <collision-left comment="false" id="0" x="0" y="0">
+                        <int id="0" val="0"/>
+                        <int id="1" val="0"/>
+                    </collision-left>
+                </if>
+                <if comment="false" x="26" y="254">
+                    <group eventID="-1" id="-1">
+                        <set-val-259-3 comment="false" x="37" y="287">
+                            <true comment="false" id="0" x="0" y="0"/>
+                        </set-val-259-3>
+                        <actor-set-prop comment="false" x="37" y="312">
+                            <ACTOR eid="this" id="0"/>
+                            <int id="1" val="Is Wall Jumping?"/>
+                            <false comment="false" id="2" x="0" y="0"/>
+                        </actor-set-prop>
+                        <custom-542 comment="false" x="37" y="344">
+                            <ACTOR eid="this" id="0"/>
+                            <get-val-259-17 comment="false" id="1" x="0" y="0"/>
+                        </custom-542>
+                    </group>
+                    <collision-right comment="false" id="0" x="0" y="0">
+                        <int id="0" val="0"/>
+                        <int id="1" val="0"/>
+                    </collision-right>
+                </if>
+            </group>
+        </collide>
+    </group>
+    <group eventID="3" id="-1">
+        <custom-540 comment="false" x="37" y="2077">
+            <ACTOR eid="this" id="0"/>
+        </custom-540>
+        <custom-540 comment="false" x="48" y="1942">
+            <ACTOR eid="this" id="0"/>
+        </custom-540>
+        <custom-540 comment="false" x="48" y="1661">
+            <ACTOR eid="this" id="0"/>
+        </custom-540>
+        <custom-540 comment="false" x="48" y="1372">
+            <ACTOR eid="this" id="0"/>
+        </custom-540>
+    </group>
+    <group eventID="4" id="0">
+        <receiver-2-538 comment="false" x="15" y="15">
+            <group eventID="-1" id="-1">
+                <set-val-259-16 comment="false" x="26" y="45">
+                    <get-byobval-259-370-1 comment="false" id="0" x="0" y="0"/>
+                </set-val-259-16>
+            </group>
+            <get-byobval-259-370-0 comment="false" id="0" x="0" y="0"/>
+            <get-byobval-259-370-1 comment="false" id="1" x="0" y="0"/>
+        </receiver-2-538>
+    </group>
+    <group eventID="4" id="-1">
+        <custom-540 comment="false" x="37" y="2077">
+            <ACTOR eid="this" id="0"/>
+        </custom-540>
+        <custom-540 comment="false" x="48" y="1942">
+            <ACTOR eid="this" id="0"/>
+        </custom-540>
+        <custom-540 comment="false" x="48" y="1661">
+            <ACTOR eid="this" id="0"/>
+        </custom-540>
+        <custom-540 comment="false" x="48" y="1372">
+            <ACTOR eid="this" id="0"/>
+        </custom-540>
+    </group>
+</groups>

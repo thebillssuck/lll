@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<scene depth="1" desc="" eventsnippetid="289" extheight="384" extwidth="672" extx="-32" exty="-32" format="3.2.0" gravx="-0.0" gravy="0.0" height="320" id="9" name="2" revision="" savecount="0" tiled="1" tileh="32" tilew="32" type="standard" width="608">
+    <layers>
+        <color-bg blue="255" green="153" red="204"/>
+        <layer blendMode="normal" color="100,168,234" id="0" locked="false" name="Layer 0" opacity="100" order="0" scrollFactorX="1.0" scrollFactorY="1.0" visible="true"/>
+    </layers>
+    <joints/>
+    <regions/>
+    <terrainRegions/>
+    <actors>
+        <actor a="0.0" aid="1" c="false" group="0" id="432" name="Jumper 1" sx="1.0" sy="1.0" x="16" y="248" z="0"/>
+        <actor a="0.0" aid="2" c="false" group="3" id="573" name="Right 2" sx="1.0" sy="1.0" x="208" y="59" z="0"/>
+        <actor a="0.0" aid="3" c="false" group="3" id="550" name="Left 3" sx="1.0" sy="1.0" x="74" y="57" z="0"/>
+        <actor a="0.0" aid="4" c="false" group="3" id="571" name="Jump 4" sx="1.0" sy="1.0" x="138" y="57" z="0"/>
+    </actors>
+    <snippets/>
+    <terrain>
+        <p pts="4,192.0,0.0,192.0,32.0,0.0,32.0,0.0,0.0" x="0.0" y="288.0"/>
+    </terrain>
+    <atlases members="0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31," retainAtlases="false"/>
+</scene>
